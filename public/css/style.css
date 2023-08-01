@@ -1,0 +1,37 @@
+* {
+    --Amarillo: #eac926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-Oscuro: #666;
+    --Gris-Claro: #ebebeb;
+    --Verde: #39b54a;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-title {
+    font-size: 24px;
+}
+
+.text-price {
+    font-size: 18px;
+}
+
+.text-discount {
+    font-size: 16px;
+}
+
+.text-desc {
+    font-size: 16px;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
