@@ -1,48 +1,42 @@
 * {
-    --Amarillo: #eac926;
-    --Azul: #03264C;
-    --Celeste: #1259c3;
-    --Gris-Oscuro: #666;
-    --Gris-Claro: #ebebeb;
-    --Verde: #39b54a;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
 }
 
-header {
-  background-color: var(--Amarillo);
+.header {
   padding: 1.5rem;
+  font-size: 14px;
 }
 
-.container-ls {
+.container-logo-search {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.logo-empresa {
+.logo {
   width: 50%;
 }
 
-.search-bar {
+.search {
   width: 100%;
   position: relative;
 }
 
-.search-bar input {
+.search input {
   position: relative;
-  border: 1px solid var(--Gris-Claro);
+  border: 1px solid #ebebeb;
   width: 100%;
   padding: 0.5rem;
   border-radius: 5px;
   font-size: 16px;
 }
 
-.search-bar button {
+.search button {
   position: absolute;
   right: 0.25rem;
   height: 100%;
@@ -55,7 +49,7 @@ header {
   background-color: white;
 }
 
-.search-bar button i {
+.search button i {
   font-size: 14px;
   color: #666;
 }
@@ -85,6 +79,7 @@ main {
 .article-item {
   width: 100%;
   height: 100%;
+  transform: box-shadow 300ms ease-in-out;
 }
 
 .article-item img {
@@ -135,7 +130,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--Celeste);
+}
+
+.burger-menu i {
+  font-size: 24px;
 }
 
 .banner {
@@ -175,12 +173,21 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
     margin-top: 6rem;
     margin-bottom: 2rem;
+    color: #666;
 }
 
-.footer section {
+.items-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .items-footer article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,36 +197,127 @@ main {
     color: #666;
 }
 
-.footer section h3 {
+.footer .items-footer article h6 {
     font-size: 16px;
 }
 
-.footer section i {
+.footer .items-footer article i {
     color: #1259c3;
     font-size: 3rem;
 }
 
-.footer section span {
+.footer .items-footer article span {
     font-size: 14px;
 }
 
-/* Colores */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media (min-width: 640px) {
+  .header .main-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .main-nav ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .text-header {
+    margin: 2rem auto;
+  }
+
+  .logo img {
+    width: 25%;
+  }
+
+  .header .burger-menu {
+    display: none;
+  }
+
+  .description-item .text-name {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .article-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article-item {
+    flex-basis: 50%;
+  }
+
+  .article-item:hover {
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+  }
+
+  .article-item:hover .description-item .product-delivery-icon {
+    animation: rotation 2s infinite linear;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .items-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+
 
 .yellow-text {
-    color: #eac926;
+  color: #eac926;
 }
 .blue-text {
-    color: #03264c;
+  color: #03264c;
 }
 .lb-text {
-    color: #1259c3;
+  color: #1259c3;
 }
 .dark-text {
-    color: #666;
+  color: #666;
 }
 .light-text {
-    color: #ebebeb;
+  color: #ebebeb;
 }
 .green-text {
-    color: #39b54a;
+  color: #39b54a;
+}
+
+.yellow-bg {
+  background-color: #eac926;
+}
+.blue-bg {
+  background-color: #03264c;
+}
+.lb-bg {
+  background-color: #1259c3;
+}
+.dark-bg {
+  background-color: #666;
+}
+.light-bg {
+  background-color: #ebebeb;
+}
+.green-bg {
+  background-color: #39b54a;
+}
+
+.white-bg {
+  background-color: #fff;
 }
